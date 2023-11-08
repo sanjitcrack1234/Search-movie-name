@@ -6,7 +6,7 @@ from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CommandHandler, MessageHandler, Filters, CallbackQueryHandler, Dispatcher
 from movies_scraper import search_movies, get_movie
 
-TOKEN ="6525502772:AAFQgq70G7TXJZxZsXFpv6nXMQ5RAu9TK9Q"
+TOKEN = "6525502772:AAFQgq70G7TXJZxZsXFpv6nXMQ5RAu9TK9Q"
 URL = "https://search-movie-bot.vercel.app/"
 bot = Bot(TOKEN)
 
