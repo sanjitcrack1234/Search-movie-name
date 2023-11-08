@@ -7,7 +7,7 @@ from telegram.ext import CommandHandler, MessageHandler, Filters, CallbackQueryH
 from movies_scraper import search_movies, get_movie
 
 TOKEN = "6525502772:AAFQgq70G7TXJZxZsXFpv6nXMQ5RAu9TK9Q"
-URL = "https://search-movie-bot.vercel.app/"
+URL = "https://search-movie-name.vercel.app/"
 bot = Bot(TOKEN)
 
 app = Flask(__name__)
