@@ -6,7 +6,7 @@ from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CommandHandler, MessageHandler, Filters, CallbackQueryHandler, Dispatcher
 from movies_scraper import search_movies, get_movie
 
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.getenv("6525502772:AAFQgq70G7TXJZxZsXFpv6nXMQ5RAu9TK9Q")
 URL = "https://search-movie-bot.vercel.app/"
 bot = Bot(TOKEN)
 
@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 def welcome(update, context) -> None:
     update.message.reply_text(f"Hello {update.message.from_user.first_name}, Welcome to SB Movies.\n"
-                              f"🔥 Download Your Favourite Movies For 💯 Free And 🍿 Enjoy it.")
+                              f"🔥 Download Your Favorite Movies For 💯 Free And 🍿 Enjoy it.")
     update.message.reply_text("👇 Enter Movie Name 👇")
 
 def find_movie(update, context):
