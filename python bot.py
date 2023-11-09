@@ -5,7 +5,7 @@ from telegram.ext import Dispatcher, CommandHandler, MessageHandler, Filters, Ca
 app = Flask(__name__)
 
 # Your Telegram Bot Token
-TOKEN = '6525502772:AAFQgq70G7TXJZxZsXFpv6nXMQ5RAu9TK9Q'
+TOKEN = 'Your_Telegram_Bot_Token'
 
 @app.route('/')
 def index():
