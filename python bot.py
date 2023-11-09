@@ -1,12 +1,11 @@
-pip install beautifulsoup4==4.11.1 python-telegram-bot==13.14 requests==2.28.1 Flask==2.2.2
-
 import telegram
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-
-# Other imports for your specific bot logic
+from flask import Flask, request
+import requests
 
 # Your Telegram Bot Token
-TOKEN = '6525502772:AAFQgq70G7TXJZxZsXFpv6nXMQ5RAu9TK9Q'
+TOKEN = 'YOUR_BOT_TOKEN'
+WEBHOOK_URL = 'YOUR_WEBHOOK_URL'
 
 # Create the bot instance
 bot = telegram.Bot(token=TOKEN)
@@ -31,3 +30,25 @@ dispatcher.add_handler(start_handler)
 # Start your bot
 updater.start_polling()
 
+# Create the Flask app
+app = Flask(__name)
+
+@app.route('/')
+def index():
+    return 'Hello World!'
+
+@app.route('/setwebhook', methods=['GET', 'POST'])
+def set_webhook():
+    url = f'https://api.telegram.org/bot{TOKEN}/setWebhook'
+    params = {
+        'url': WEBHOOK_URL + '/' + TOKEN
+    }
+
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        return "Webhook setup ok"
+    else:
+        return "Webhook setup failed"
+
+if __name__ == '__main__':
+    app.run(debug=True)
