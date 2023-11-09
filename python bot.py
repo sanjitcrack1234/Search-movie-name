@@ -4,8 +4,8 @@ from flask import Flask, request
 import requests
 
 # Your Telegram Bot Token
-TOKEN = 'YOUR_BOT_TOKEN'
-WEBHOOK_URL = 'YOUR_WEBHOOK_URL'
+TOKEN = '6525502772:AAFQgq70G7TXJZxZsXFpv6nXMQ5RAu9TK9Q'
+WEBHOOK_URL = 'https://search-movie-name.vercel.app/setwebhook'
 
 # Create the bot instance
 bot = telegram.Bot(token=TOKEN)
