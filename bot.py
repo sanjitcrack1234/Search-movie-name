@@ -6,7 +6,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 # Other imports for your specific bot logic
 
 # Your Telegram Bot Token
-TOKEN = 'YOUR_BOT_TOKEN'
+TOKEN = '6525502772:AAFQgq70G7TXJZxZsXFpv6nXMQ5RAu9TK9Q'
 
 # Create the bot instance
 bot = telegram.Bot(token=TOKEN)
